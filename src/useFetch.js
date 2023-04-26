@@ -18,7 +18,6 @@ export const useFetch = (url) => {
                 setData(response.data);
             } catch (error) {
                 setError(error)
-                console.log('An error occurred:', error);
             } finally {
                 setLoading(false);
             }

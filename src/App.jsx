@@ -4,6 +4,7 @@ import FetchingData from './FetchingData';
 import PostingData from './PostingData';
 
 function App() {
+  //Fetch/Post
   const [showFetchData, setShowFetchData] = useState(true);
   const [showPostData, setPostData] = useState(false);
 

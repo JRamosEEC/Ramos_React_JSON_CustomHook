@@ -6,9 +6,8 @@ import { useFetch } from './useFetch';
 
 const FetchingData = () => {
     const {data: posts, loading, error} = useFetch('posts');
-
-    //I noticed this works yet it doesn't when I do it with loading
-    error ? () => { return <p style={{ textAlign:'center'}}>An error occurres {error}</p>; } : undefined;
+    
+    if(error != undefined && error.length > 0) { return <p style={{ textAlign:'center'}}>An error occurres {error}</p>; };
 
     if (loading) { return <Loading /> }
 
